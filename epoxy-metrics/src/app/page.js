@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center bg-white text-gray-900 font-sans">
+    <main className="flex min-h-screen flex-col items-center bg-light">
       <Navbar />
       <Hero />
       <Problem />
