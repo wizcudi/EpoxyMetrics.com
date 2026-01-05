@@ -21,9 +21,9 @@ export default function Hero() {
         >
           Get Your Free Audit
         </Link>
-        <button className="cursor-pointer bg-light-dark text-primary-dark px-8 py-4 rounded-xl text-lg font-bold hover:bg-primary-dark hover:text-light-dark transition text-center">
+        <Link href="#pricing" className="cursor-pointer bg-light-dark text-primary-dark px-8 py-4 rounded-xl text-lg font-bold hover:bg-primary-dark hover:text-light-dark transition text-center">
           How It Works
-        </button>
+        </Link>
       </div>
     </section>
   );

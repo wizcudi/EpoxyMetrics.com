@@ -40,10 +40,8 @@ export default function Solution() {
                   </div>
                   <div>
                     <h4 className="text-light font-bold text-lg">High-Converting Landing Page</h4>
-                    <p className="text-light-dark text-sm">Custom built. Lightning fast. Designed to get quotes, not just views. 
-                      <span className="text-alt font-bold"> 
-                        Included Free.
-                      </span>
+                    <p className="text-light-dark text-sm">Custom built. Lightning fast. Designed to get quotes, not just views.
+                      
                     </p>
                   </div>
                 </div>
@@ -90,7 +88,7 @@ export default function Solution() {
                   Start Scaling Now
                 </Link>
 
-                <p className="text-sm text-light-dark leading-relaxed">
+                <p className="text-base text-light-dark leading-relaxed">
                   *Plus your actual ad budget paid directly to Google/Facebook. We recommend starting with $1,000/mo ad spend.
                 </p>
               </div>
