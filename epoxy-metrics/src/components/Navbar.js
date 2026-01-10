@@ -11,7 +11,7 @@ export default function Navbar() {
           href="#contact" 
           className=" bg-primary-dark text-light px-5 py-2 rounded-lg font-medium hover:bg-primary-hover transition"
         >
-          Book a Call
+          Get Your Growth Blueprint
         </Link>
       </div>
     </nav>
