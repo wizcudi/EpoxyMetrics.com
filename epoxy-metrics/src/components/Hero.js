@@ -20,7 +20,7 @@ export default function Hero() {
           href="#contact" 
           className="bg-primary text-light px-8 py-4 rounded-xl text-lg font-bold hover:bg-primary-dark transition shadow-lg shadow-primary-light text-center"
         >
-          Get Your Growth Blueprint
+          Get More Jobs
         </Link>
         <Link href="#pricing" className="cursor-pointer bg-light-dark text-primary-dark px-8 py-4 rounded-xl text-lg font-bold hover:bg-primary-dark hover:text-light-dark transition text-center">
           How It Works

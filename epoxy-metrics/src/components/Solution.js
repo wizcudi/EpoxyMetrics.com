@@ -83,7 +83,7 @@ export default function Solution() {
                   href="#contact" 
                   className="block w-full bg-primary hover:bg-primary-dark text-light font-bold py-4 rounded-xl text-lg transition shadow-lg shadow-primary/25 mb-6"
                 >
-                  Get Your Growth Blueprint
+                  Get More Jobs
                 </Link>
 
                 <p className="text-base text-light-dark leading-relaxed">

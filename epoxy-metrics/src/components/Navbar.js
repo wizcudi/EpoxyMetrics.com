@@ -9,9 +9,9 @@ export default function Navbar() {
         </div>
         <Link 
           href="#contact" 
-          className=" bg-primary-dark text-light px-5 py-2 rounded-lg font-medium hover:bg-primary-hover transition"
+          className="flex text-center bg-primary-dark text-light px-5 py-2 rounded-lg font-medium hover:bg-primary-hover transition"
         >
-          Get Your Growth Blueprint
+          Get More Jobs
         </Link>
       </div>
     </nav>
