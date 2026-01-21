@@ -30,7 +30,7 @@ export default function Contact() {
         businessName: formData.businessName,
         email: formData.email,
         createdAt: serverTimestamp(),
-        source: "web_design_offer", // Updated source tag
+        source: "web_design_offer",
       });
 
       router.push('/thank-you');
@@ -42,13 +42,13 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="w-full bg-dark text-light py-20 px-6">
+    <section id="contact" className="w-full bg-dark text-light py-10 px-6">
       <div className="max-w-xl mx-auto text-center">
-        {/* Header Updated for Web Design Strategy */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        
+        <h2 className="text-3xl sm:text-4xl font-bold mb-6">
           Ready for a Professional Website?
         </h2>
-        <p className="text-light-dark mb-8 text-lg">
+        <p className="text-light-dark mb-8 text-base sm:text-lg">
           Fill out the form below to lock in your build slot. I&apos;ll review your current online presence and email you with the next steps.
         </p>
 
@@ -66,19 +66,19 @@ export default function Contact() {
             className="bg-light p-8 rounded-3xl text-left shadow-2xl text-dark space-y-5"
           >
             <div>
-              <label className="block text-sm font-bold mb-2">Name</label>
+              <label className="block text-base font-bold mb-2">Name</label>
               <input
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
                 type="text"
-                className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary outline-none transition"
+                className="w-full p-4 text-base border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary outline-none transition"
                 placeholder="Your Name"
               />
             </div>
             <div>
-              <label className="block text-sm font-bold mb-2">
+              <label className="block text-base font-bold mb-2">
                 Business Name
               </label>
               <input
@@ -87,12 +87,12 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 type="text"
-                className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary outline-none transition"
+                className="w-full p-4 text-base border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary outline-none transition"
                 placeholder="Epoxy Pros LLC"
               />
             </div>
             <div>
-              <label className="block text-sm font-bold mb-2">
+              <label className="block text-base font-bold mb-2">
                 Email Address
               </label>
               <input
@@ -101,7 +101,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 type="email"
-                className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary outline-none transition"
+                className="w-full p-4 text-base border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary outline-none transition"
                 placeholder="owner@example.com"
               />
             </div>
@@ -115,7 +115,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className={`w-full font-bold py-5 rounded-xl cursor-pointer transition-all transform hover:scale-[1.02] mt-4 shadow-lg shadow-primary/30 ${
+              className={`w-full font-bold py-5 rounded-xl text-lg cursor-pointer transition-all transform hover:scale-[1.02] mt-4 shadow-lg shadow-primary/30 ${
                 status === "loading"
                   ? "bg-gray-400 cursor-not-allowed"
                   : "bg-primary text-white hover:bg-primary-dark"
