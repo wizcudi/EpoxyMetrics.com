@@ -1,7 +1,7 @@
-"use client"; // Required for using useState and onClick handlers in Next.js
+"use client"; 
 
 import { useState } from "react";
-import { db } from "../lib/firebase"; // Importing the setup we made in Step 1
+import { db } from "../lib/firebase"; 
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useRouter } from 'next/navigation';
 
@@ -12,7 +12,7 @@ export default function Contact() {
     email: "",
   });
 
-  const [status, setStatus] = useState("idle"); // 'idle', 'loading', 'success', 'error'
+  const [status, setStatus] = useState("idle"); 
 
   const router = useRouter();
 
@@ -24,25 +24,16 @@ export default function Contact() {
     e.preventDefault();
     setStatus("loading");
 
-
     try {
-      // 1. Send data to Firestore "leads" collection
       await addDoc(collection(db, "leads"), {
         name: formData.name,
         businessName: formData.businessName,
         email: formData.email,
-        createdAt: serverTimestamp(), // Adds a server-side timestamp
-        source: "landing_page_form",
+        createdAt: serverTimestamp(),
+        source: "web_design_offer", // Updated source tag
       });
 
       router.push('/thank-you');
-
-      // 2. Clear form and show success
-      setStatus("success");
-      setFormData({ name: "", businessName: "", email: "" });
-
-      // Optional: Reset success message after 5 seconds so they can submit again if needed
-      setTimeout(() => setStatus("idle"), 5000);
 
     } catch (error) {
       console.error("Error adding document: ", error);
@@ -50,26 +41,22 @@ export default function Contact() {
     }
   };
 
-  
-
   return (
     <section id="contact" className="w-full bg-dark text-light py-20 px-6">
       <div className="max-w-xl mx-auto text-center">
-        {/* Header Updated to match Growth Blueprint strategy */}
+        {/* Header Updated for Web Design Strategy */}
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Get Your Growth Blueprint
+          Ready for a Professional Website?
         </h2>
         <p className="text-light-dark mb-8 text-lg">
-          I&apos;ll personally review your business and show you exactly how to
-          fill your calendar with exclusive epoxy leads. <br />
-          <strong>Zero pressure, just a plan.</strong>
+          Fill out the form below to lock in your build slot. I&apos;ll review your current online presence and email you with the next steps.
         </p>
 
         {status === "success" ? (
           <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-8 rounded-3xl relative" role="alert">
-            <strong className="font-bold block text-xl mb-2">Message Received!</strong>
+            <strong className="font-bold block text-xl mb-2">Request Received!</strong>
             <span className="block sm:inline">
-              Thanks for reaching out. I&apos;ll be reviewing your details and will email you shortly with your blueprint.
+              Thanks for reaching out. I&apos;ll be in touch shortly to discuss your new website.
             </span>
           </div>
         ) : (
@@ -134,13 +121,8 @@ export default function Contact() {
                   : "bg-primary text-white hover:bg-primary-dark"
               }`}
             >
-              {status === "loading" ? "Sending..." : "Get My Growth Blueprint"}
+              {status === "loading" ? "Sending..." : "Let's Build It"}
             </button>
-
-            <p className="text-center text-xs text-gray-400 mt-4">
-              *I value your time. Our strategy session will be focused and
-              fluff-free.
-            </p>
           </form>
         )}
       </div>

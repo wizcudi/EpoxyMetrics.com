@@ -4,15 +4,15 @@ import { GoogleTagManager } from '@next/third-parties/google';
 
 const inter = Inter({ subsets: ["latin"] });
 
-// --- THIS IS THE NEW METADATA SECTION ---
+// --- UPDATED METADATA ---
 export const metadata = {
-  title: "Epoxy Metrics | Managed Marketing for Flooring Pros",
-  description: "We help epoxy contractors fill their calendars with exclusive leads. Get your Growth Blueprint today.",
+  title: "Epoxy Metrics | High-Converting Websites for Flooring Pros",
+  description: "We build custom, high-speed landing pages specifically for epoxy contractors. Stop losing leads to bad design.",
   
   // Social Media Previews (OpenGraph)
   openGraph: {
-    title: "Epoxy Metrics | Managed Marketing for Flooring Pros",
-    description: "Stop chasing tire-kickers. Get exclusive epoxy leads sent directly to your phone.",
+    title: "Epoxy Metrics | Web Design for Epoxy Pros",
+    description: "Your work is premium. Your website should be too. Get a custom site built for conversion.",
     url: 'https://epoxymetrics.com',
     siteName: 'Epoxy Metrics',
     locale: 'en_US',
@@ -23,7 +23,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* The component handles both the <head> and <body> requirements */}
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
       <body className={inter.className}>
         {children}
