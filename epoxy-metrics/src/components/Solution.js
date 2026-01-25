@@ -14,12 +14,7 @@ export default function Solution() {
             
             {/* Left Side: The Deliverables */}
             <div className="p-8 md:p-12 md:w-3/5 border-b md:border-b-0 ">
-              {/* H2: Main Section Header */}
-              <h2 className="text-3xl sm:text-4xl font-bold text-light mb-4">Custom Landing Page</h2>
-              {/* Description Body Text */}
-              <p className="text-light-dark mb-8 text-base sm:text-lg">
-                A specialized website designed for one purpose: Convincing homeowners to request a quote.
-              </p>
+              
 
               <div className="space-y-8">
                 
@@ -73,7 +68,7 @@ export default function Solution() {
                   href="#contact" 
                   className="block w-full bg-primary hover:bg-primary-dark text-light font-bold py-4 rounded-xl text-lg sm:text-xl transition shadow-lg shadow-primary/25 mb-6"
                 >
-                  Start My Build
+                  Get More Quotes
                 </Link>
 
                 <p className="text-sm text-light-dark leading-relaxed">

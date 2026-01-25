@@ -121,7 +121,7 @@ export default function Contact() {
                   : "bg-primary text-white hover:bg-primary-dark"
               }`}
             >
-              {status === "loading" ? "Sending..." : "Let's Build It"}
+              {status === "loading" ? "Sending..." : "Get More Quotes"}
             </button>
           </form>
         )}
