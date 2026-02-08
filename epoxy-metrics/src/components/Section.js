@@ -8,7 +8,7 @@ export default function Section({ children, id, variant = "light" }) {
         light: "bg-lightColor text-mainColor",
         accent: "bg-accentColor text-darkColor",
         dark: "bg-darkColor text-lightColor",
-        main: "bg-mainColor text-lightColor border-b-3 border-t-2 border-accentColor",
+        main: "bg-mainColor text-lightColor border-b-2 border-t-2 border-accentColor",
     };
 
     return (

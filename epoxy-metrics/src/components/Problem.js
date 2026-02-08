@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export default function Problem() {
   return (
-    <Section variant="light">
+    <Section id="portfolio" variant="light">
 
       <div className="flex flex-col gap-2 ">
         {/* H2: Scaled to match Hero hierarchy */}

@@ -7,7 +7,7 @@ export default function Solution() {
 
 
       {/* The Offer Card */}
-      <div className="rounded-3xl py-12 px-2 bg-lightColor sm:px-10 border-2 border-accentColor text-mainColor">
+      <div className="rounded-3xl py-12 px-2 bg-lightColor sm:px-10 border-3 border-accentColor text-mainColor">
 
         <div className="flex flex-col gap-14 sm:gap-10 md:flex-row">
 
