@@ -1,49 +1,40 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff; /* <--- Sets it to WHITE */
-  --foreground: #171717;
+@theme inline {
+  /* Brand Colors */
+  --color-mainColor: #1B3022;
+  --color-accentColor: #B87333;
+  --color-accentColorHover: #D18B4A;
+  --color-lightColor: #F5F5F5;
+  --color-darkColor: #0B0C10;
+
+
+
+
+  /* Brand Typography */
+  --font-brand: Arial, Helvetica, sans-serif;
+
+  --text-defaultSize: 20px;
+
+  --text-headingSizeLandscape: 60px;
+  --text-subheadingSizeLandscape: 50px;
+
+  --text-headingSizeTablet: 50px;
+  --text-subheadingSizeTablet: 45px;
+
+  --text-headingMobile: 40px;
+  --text-subheadingSizeMobile: 35px;
+
+
+  --text-paragraphSizeTablet: 20px;
+  --text-paragraphSizeMobile: 17px;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
-  --color-light: #ffffff;
-  --color-light-dark: #e5e7eb;
-  --color-light-blue: #3b82f6;
- 
-  --color-primary: #2563eb;  
-  --color-primary-hover: #1d4ed8;
-  --color-primary-dark: #1e3a8a; 
-  --color-primary-light: #eff6ff;
-
-  --color-alt: #4ade80;
-
-  --color-alt-3: #a855f7;
-  
-
-  --color-dark: #0f172a;
-
-
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a; /* <--- Overwrites it to BLACK */
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Using the variable defined in @theme */
+  font-family: var(--font-brand);
 }
