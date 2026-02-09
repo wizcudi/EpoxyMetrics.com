@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-darkColor text-lightColor border-t-2 border-accentColor py-12 md:py-20">
+    <footer className="bg-darkColor text-lightColor border-t-2 border-accentColor px-6 pb-8 pt-12 md:pt-20">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
 
         {/* Area 1: Bio & Socials */}
