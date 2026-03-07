@@ -36,10 +36,14 @@ export default function Solution() {
       <div className="text-left ">
         <h2 className="
           text-headingMobile md:text-headingSizeTablet lg:text-headingSizeLandscape 
-          font-extrabold mb-4 tracking-tight
+          font-extrabold tracking-tight 
         ">
-          The Solution
+          The Solution?
         </h2>
+        <h1 className="
+          text-headingMobile md:text-headingSizeTablet lg:text-headingSizeLandscape 
+          font-extrabold mb-4 tracking-tight text-accentColor 
+        ">Epoxy Revenue Engine.</h1>
         <p className="text-paragraphSizeMobile font-bold max-w-3xl">
           A complete, done-for-you system that fills your calendar with jobs.
           I personally handle the entire heavy lifting, from running your ads to filling your calendar with qualifying leads.
