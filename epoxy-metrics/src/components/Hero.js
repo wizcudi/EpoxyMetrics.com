@@ -3,11 +3,11 @@ import Section from "./Section";
 
 export default function Hero() {
   return (
-    <Section variant="light">
+    <Section variant="main">
 
       <div className="flex justify-center">
-        <div className=" px-6 py-1.5 rounded-full font-semibold text-darkColor bg-mainColor/30 border border-mainColor border-2  ">
-          Websites for Epoxy Pros
+        <div className=" px-6 py-1.5 rounded-full font-semibold bg-darkColor/30 text-paragraphSizeMobile border border-accentColor border-2">
+          Epoxy Revenue Engine
         </div>
       </div>
 
@@ -15,22 +15,26 @@ export default function Hero() {
         className="
           font-extrabold text-center
           text-headingMobile md:text-headingSizeTablet lg:text-headingSizeLandscape
+          capitalize leading-tight
         "
       >
-        Your Floors Are <span className="text-accentColor italic">Premium.</span>
-        <br />
-        Your <span className="text-accentColor italic">Website</span> Should Be Too.
+        Fill your calendar with <span className="text-accentColor">Qualified</span> Leads
       </h1>
+
+      <p className="text-center text-paragraphSizeMobile md:text-lg font-bold max-w-2xl mx-auto  ">
+        A complete, done-for-you service that fills your calendar with highly qualified
+        epoxy and concrete coating leads.
+      </p>
 
       <div className="flex flex-col sm:flex-row gap-2 w-full justify-center">
         {/* Solid Primary Button */}
         <Button href="#contact" variant="primary">
-          Start Getting More Leads
+          More Qualified Leads
         </Button>
 
         {/* Outline Button */}
         <Button href="#pricing" variant="outline">
-          See What's Included
+          See What&apos;s Included
         </Button>
       </div>
 

@@ -20,7 +20,7 @@ export default function Problem() {
           </h2>
 
           <p className="text-lg text-darkColor/80 leading-relaxed">
-            Word of mouth is great, but it’s unpredictable. Your business deserves a <span className="font-bold">24/7 digital showroom</span> that builds trust and captures paying clients—even while you’re on the job site.
+            Word of mouth is great, but it’s unpredictable. Your business deserves a <span className="font-bold">24/7 digital showroom</span> that builds trust and captures paying clients, even while you’re on the job site.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-2">

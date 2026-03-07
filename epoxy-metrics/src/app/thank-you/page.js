@@ -13,9 +13,9 @@ export default function ThankYou() {
 
           {/* Animated Success Icon Container */}
           <div className="flex justify-center mb-8">
-            <div className="relative w-24 h-24 flex items-center justify-center bg-green-100 rounded-full">
+            <div className="relative w-24 h-24 flex items-center justify-center bg-darkColor/60 rounded-full">
               <svg
-                className="w-12 h-12 text-green-600 animate-check"
+                className="w-12 h-12 text-darkColor animate-check"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -30,13 +30,13 @@ export default function ThankYou() {
               </svg>
 
               {/* Subtle Pulse Ring */}
-              <div className="absolute inset-0 rounded-full border-4 border-green-200 animate-[ping_2s_infinite_opacity-20]"></div>
+              <div className="absolute inset-0 rounded-full border-4 border-darkColor animate-[ping_2s_infinite_opacity-20]"></div>
             </div>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl font-extrabold text-darkColor">
-            Application <span className="text-mainColor">Received.</span>
+            Application Received.
           </h1>
 
           {/* Reassurance Copy */}

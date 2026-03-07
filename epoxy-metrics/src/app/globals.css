@@ -2,11 +2,12 @@
 
 @theme inline {
   /* Brand Colors */
-  --color-mainColor: #1B3022;
+  /* --color-mainColor: #1B3022; */
+  --color-mainColor: #F5F5F5;
   --color-accentColor: #B87333;
   --color-accentColorHover: #D18B4A;
-  --color-lightColor: #F5F5F5;
-  --color-darkColor: #0B0C10;
+
+  --color-darkColor: #1B3022;
 
 
 

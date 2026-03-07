@@ -39,18 +39,18 @@ export default function LeadForm() {
 
     return (
         // This outer DIV is your "Card" with the glass effect. 
-        // It keeps its styles so it looks identical to before.
-        <div className="w-full lg:w-2/5 bg-mainColor/40 border border-lightColor/10 backdrop-blur-md p-6 rounded-2xl shadow-xl relative overflow-hidden ">
+        // We darkened it to darkColor/40 to stand out from the new mainColor background
+        <div className="
+            w-full lg:w-2/5 bg-darkColor/80  
+            px-8 py-10 rounded-2xl relative overflow-hidden max-w-full
+        ">
 
-            {/* Subtle inner highlight for the card itself */}
-            <div className="absolute top-0 right-0 w-24 h-24 bg-accentColor/10 blur-[40px] rounded-full pointer-events-none"></div>
-
-            <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
-                <div className="grid grid-cols-1 gap-4">
+            <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
+                <div className="grid grid-cols-1 gap-6">
 
                     {/* Name */}
-                    <div className="space-y-1">
-                        <label htmlFor="name" className="text-paragraphSizeMobile font-bold text-lightColor/80">
+                    <div className="flex flex-col space-y-2">
+                        <label htmlFor="name" className="text-paragraphSizeMobile font-bold text-mainColor">
                             Full Name
                         </label>
                         <input
@@ -60,14 +60,15 @@ export default function LeadForm() {
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            className="w-full bg-darkColor/50 border border-lightColor/10 rounded-lg px-3 py-2 text-lightColor text-sm focus:outline-none focus:border-accentColor focus:ring-1 focus:ring-accentColor transition-all placeholder:text-lightColor/20"
+                            className=" text-mainColor w-full bg-darkColor/50 border border-lightColor/10 rounded-lg px-3 py-2  text-sm 
+                            focus:outline-none focus:border-accentColor focus:ring-1 focus:ring-accentColor transition-all placeholder:text-mainColor/50"
                             placeholder="Tony Stark"
                         />
                     </div>
 
                     {/* Email */}
-                    <div className="space-y-1">
-                        <label htmlFor="email" className="text-paragraphSizeMobile font-bold text-lightColor/80">
+                    <div className="flex flex-col space-y-2">
+                        <label htmlFor="email" className="text-paragraphSizeMobile font-bold text-mainColor">
                             Email
                         </label>
                         <input
@@ -77,16 +78,17 @@ export default function LeadForm() {
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="w-full bg-darkColor/50 border border-lightColor/10 rounded-lg px-3 py-2 text-lightColor text-sm focus:outline-none focus:border-accentColor focus:ring-1 focus:ring-accentColor transition-all placeholder:text-lightColor/20"
+                            className="text-mainColor w-full bg-darkColor/50 border border-lightColor/10 rounded-lg px-3 py-2  text-sm 
+                            focus:outline-none focus:border-accentColor focus:ring-1 focus:ring-accentColor transition-all placeholder:text-mainColor/50"
                             placeholder="tony@epoxymetrics.com"
                         />
                     </div>
                 </div>
 
                 {/* Message */}
-                <div className="space-y-1">
-                    <label htmlFor="message" className="text-paragraphSizeMobile font-bold text-lightColor/80">
-                        Goal / Challenge
+                <div className="flex flex-col space-y-2">
+                    <label htmlFor="message" className="text-paragraphSizeMobile font-bold text-mainColor">
+                        What's Your Goal?
                     </label>
                     <textarea
                         id="message"
@@ -94,7 +96,8 @@ export default function LeadForm() {
                         value={formData.message}
                         onChange={handleChange}
                         rows="3"
-                        className="w-full bg-darkColor/50 border border-lightColor/10 rounded-lg px-3 py-2 text-lightColor text-sm focus:outline-none focus:border-accentColor focus:ring-1 focus:ring-accentColor transition-all placeholder:text-lightColor/20 resize-none"
+                        className="text-mainColor w-full bg-darkColor/50 border border-lightColor/10 rounded-lg px-3 py-2  text-sm 
+                        focus:outline-none focus:border-accentColor focus:ring-1 focus:ring-accentColor transition-all placeholder:text-mainColor/50"
                         placeholder="I need more commercial leads..."
                     ></textarea>
                 </div>
@@ -115,7 +118,7 @@ export default function LeadForm() {
                             Sending...
                         </div>
                     ) : (
-                        "Get More Leads"
+                        "Start Your Engine"
                     )}
                 </Button>
 

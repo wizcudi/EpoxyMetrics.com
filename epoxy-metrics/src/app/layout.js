@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Epoxy Metrics | High-Converting Websites for Flooring Pros",
   description: "We build custom, high-speed landing pages specifically for epoxy contractors. Stop losing leads to bad design.",
-  
+
   // Social Media Previews (OpenGraph)
   openGraph: {
     title: "Epoxy Metrics | Web Design for Epoxy Pros",
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-x-hidden`}>
         {children}
       </body>
     </html>

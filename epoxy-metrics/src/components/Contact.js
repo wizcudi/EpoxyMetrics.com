@@ -3,29 +3,22 @@ import LeadForm from "./LeadForm"; // Import your new component
 
 export default function Contact() {
   return (
-    <Section id="contact" variant="dark">
+    <Section id="contact" variant="main">
       {/* WRAPPER: Holds the glow effects inside the Section */}
-      <div className="relative w-full">
+      <div className="relative w-full overflow-hidden">
 
-        {/* --- ACCENT HIGHLIGHTS (Copper Glow) --- */}
-        {/* These stay here so they sit behind EVERYTHING in the grid */}
-        <div className="absolute -top-20 -right-20 w-96 h-96 bg-accentColor/20 blur-[100px] rounded-full pointer-events-none z-0"></div>
-        <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-accentColor/10 blur-[80px] rounded-full pointer-events-none z-0"></div>
 
         {/* CONTENT GRID */}
-        <div className="flex lg:flex-row flex-col justify-between gap-10 items-start relative z-10">
+        <div className="flex lg:flex-row flex-col justify-between gap-10 items-start relative z-10 p-4">
 
           {/* LEFT COLUMN: Contact Info */}
           <div className="lg:w-1/2">
             <span className="text-accentColor font-bold tracking-widest uppercase text-paragraphSizeMobile block">
-              Partner With Me
+              The Epoxy Revenue Engine
             </span>
-            <h2 className="leading-tight text-headingMobile md:text-headingSizeTablet font-extrabold text-lightColor">
-              Start Getting <span className="text-accentColor">Qualified</span> Leads.
+            <h2 className="leading-tight mt-2 mb-6 text-headingMobile md:text-headingSizeTablet font-extrabold">
+              Fill Your Calendar with <span className="text-accentColor">Qualified Leads.</span>
             </h2>
-            <p className="text-paragraphSizeMobile text-lightColor/70 mt-2 mb-10">
-              Stop chasing homeowners who want "cheap." We build systems that attract clients willing to pay for premium epoxy work. Fill out the form to get your free audit.
-            </p>
 
             <div className="space-y-8">
               {/* Phone Icon & Info */}
@@ -36,8 +29,8 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-lightColor font-bold text-lg">Call Us Directly</h4>
-                  <p className="text-lightColor/60">(689) 500-2300</p>
+                  <h4 className="font-bold text-lg">Call Us Directly</h4>
+                  <p className="">(689) 500-2300</p>
                 </div>
               </div>
 
@@ -49,8 +42,8 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-lightColor font-bold text-lg">Email Us</h4>
-                  <p className="text-lightColor/60">tony@epoxymetrics.com</p>
+                  <h4 className=" font-bold text-lg">Email Us</h4>
+                  <p className="">tony@epoxymetrics.com</p>
                 </div>
               </div>
 
@@ -63,8 +56,8 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-lightColor font-bold text-lg">Who We Serve</h4>
-                  <p className="text-lightColor/60">Epoxy & Concrete Coating Pros across the USA.</p>
+                  <h4 className="font-bold text-lg">Who We Serve</h4>
+                  <p className="">Epoxy & Concrete Coating Pros across the USA.</p>
                 </div>
               </div>
             </div>
