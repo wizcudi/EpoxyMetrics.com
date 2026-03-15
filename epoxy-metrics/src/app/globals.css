@@ -1,19 +1,25 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Brand Colors */
-  /* --color-mainColor: #1B3022; */
+  /* Legacy Brand Colors (kept for thank-you page compatibility) */
   --color-mainColor: #F5F5F5;
   --color-accentColor: #B87333;
   --color-accentColorHover: #D18B4A;
-
   --color-darkColor: #1B3022;
 
-
-
+  /* New Navy/Gold Palette */
+  --color-navy: #0B1F3A;
+  --color-navyMid: #122844;
+  --color-navyLight: #1E3A5F;
+  --color-gold: #C9A84C;
+  --color-goldLight: #E2C97E;
+  --color-goldPale: #F5EDD2;
+  --color-offWhite: #F8F6F0;
+  --color-textMuted: #6B7B8D;
 
   /* Brand Typography */
   --font-brand: Arial, Helvetica, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
 
   --text-defaultSize: 20px;
 
@@ -26,12 +32,8 @@
   --text-headingMobile: 40px;
   --text-subheadingSizeMobile: 35px;
 
-
   --text-paragraphSizeTablet: 20px;
   --text-paragraphSizeMobile: 17px;
-
-
-
 }
 
 html {

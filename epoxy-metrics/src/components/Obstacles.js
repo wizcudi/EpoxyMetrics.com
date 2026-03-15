@@ -1,44 +1,89 @@
-import Section from "./Section";
-
 export default function Obstacles() {
-    const obstacles = [
-        "Need help finding leads",
-        "Need help filtering out poor leads with qualified leads that actually book a time on your calendar",
-        "Need help with digital marketing",
-        "Need help getting a ROI on digital Ads",
-        "Need help setting up smart workflows saving time on repetitive task",
-    ];
+  const painPoints = [
+    {
+      num: "01",
+      title: "Your pipeline dries up between jobs",
+      desc: "Word of mouth got you started, but it's not consistent enough to grow. You finish one job and scramble to find the next.",
+    },
+    {
+      num: "02",
+      title: "You're wasting time on tire-kickers",
+      desc: "You're quoting homeowners who price-shop three contractors and ghost you. Chasing bad leads is costing you hours you can't get back.",
+    },
+    {
+      num: "03",
+      title: "Digital marketing feels like a black hole",
+      desc: "You've tried boosting posts or running ads. Results were underwhelming and you had no idea what went wrong.",
+    },
+    {
+      num: "04",
+      title: "You can't get a real ROI from paid ads",
+      desc: "Every ad dollar feels like a gamble. No system, no tracking, no repeatable results, just hope and a shrinking budget.",
+    },
+    {
+      num: "05",
+      title: "Follow-up falls through the cracks",
+      desc: "A lead comes in, life gets busy, and a week later you realize you never followed up. That job went to a competitor who did.",
+    },
+    {
+      num: "06",
+      title: "You're too busy doing floors to grow",
+      desc: "You're great at the work but marketing and follow-up require a completely different skill set and hours you don't have.",
+    },
+  ];
 
-    return (
-        <Section id="obstacles" variant="main">
-            <div className="max-w-4xl mx-auto flex flex-col items-center">
-                <h2 className="capitalize text-center leading-tight text-headingMobile md:text-headingSizeTablet font-extrabold mb-7">
-                    Sound <span className="text-accentColor">Familiar</span> to you?
-                </h2>
+  return (
+    <section id="pain" className="bg-navy px-[5%] py-16 md:py-[90px]">
+      <div className="max-w-[1200px] mx-auto">
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                    {obstacles.map((obstacle, index) => (
-                        <div key={index} className="flex items-start gap-4 bg-accentColor/20 p-6 rounded-2xl border border-accentColor">
-                            <div className="flex-shrink-0 mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 text-accentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                                </svg>
-                            </div>
-                            <p className=" font-bold text-lg leading-relaxed">
-                                {obstacle}
-                            </p>
-                        </div>
-                    ))}
+        {/* Header */}
+        <div className="flex items-center gap-2.5 text-[11px] font-bold tracking-[0.14em] uppercase text-gold mb-3.5 font-brand">
+          <span className="w-5 h-0.5 bg-gold flex-shrink-0" />
+          Sound Familiar?
+        </div>
+        <h2 className="font-serif font-bold text-white leading-[1.15] mb-3.5 text-[clamp(28px,3vw,42px)]">
+          Every Epoxy Contractor<br />Hits These Walls
+        </h2>
+        <p className="text-[16px] text-white/50 max-w-[540px] leading-[1.75] font-brand mb-12">
+          If any of these keep you up at night, you&apos;re not alone and
+          you&apos;re exactly who the Epoxy Revenue Engine was built for.
+        </p>
 
-                    {/* Empty div or a CTA element to balance the 5 items in a 2-column grid */}
-                    <div className="flex items-center justify-center p-6 bg-accentColor/20 rounded-2xl border border-accentColor/20 border-dashed">
-                        <p className="text-accentColor font-bold text-center">
-                            We solve all of this.
-                        </p>
-                    </div>
-
-                </div>
+        {/* Pain Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4.5">
+          {painPoints.map((point) => (
+            <div
+              key={point.num}
+              className="border border-gold/15 rounded-[10px] px-6 py-6.5 hover:border-gold/50 hover:bg-gold/4 transition-all font-brand"
+            >
+              <div className="text-[38px] font-bold text-gold/15 leading-none mb-2.5 font-serif">
+                {point.num}
+              </div>
+              <h3 className="text-[16px] font-semibold text-white leading-[1.35] mb-2">
+                {point.title}
+              </h3>
+              <p className="text-[13px] text-white/42 leading-[1.7]">
+                {point.desc}
+              </p>
             </div>
-        </Section>
-    );
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-12 pt-7 border-t border-gold/20 flex items-center justify-between flex-wrap gap-5">
+          <p className="text-[22px] font-bold text-white max-w-[520px] font-serif">
+            We built one system to{" "}
+            <span className="text-gold">solve all of this.</span>
+          </p>
+          <a
+            href="#offer"
+            className="bg-gold text-navy text-[14px] font-bold px-7 py-3.5 rounded hover:bg-goldLight transition-colors font-brand"
+          >
+            See the Solution →
+          </a>
+        </div>
+
+      </div>
+    </section>
+  );
 }

@@ -1,72 +1,82 @@
-import Section from "./Section";
-import LeadForm from "./LeadForm"; // Import your new component
+import LeadForm from "./LeadForm";
 
 export default function Contact() {
   return (
-    <Section id="contact" variant="main">
-      {/* WRAPPER: Holds the glow effects inside the Section */}
-      <div className="relative w-full overflow-hidden">
+    <section id="contact" className="bg-navy px-[5%] py-16 md:py-[90px]">
+      <div className="max-w-[1200px] mx-auto">
 
+        {/* Header */}
+        <div className="flex items-center gap-2.5 text-[11px] font-bold tracking-[0.14em] uppercase text-gold mb-3.5 font-brand">
+          <span className="w-5 h-0.5 bg-gold flex-shrink-0" />
+          Get Started
+        </div>
+        <h2 className="font-serif font-bold text-white leading-[1.15] mb-3.5 text-[clamp(28px,3vw,42px)]">
+          Let&apos;s Fill Your Calendar
+        </h2>
+        <p className="text-[16px] text-white/50 max-w-[540px] leading-[1.75] font-brand mb-12">
+          Tell us about your business and we&apos;ll reach out within 24 hours to walk
+          you through how the Engine works.
+        </p>
 
-        {/* CONTENT GRID */}
-        <div className="flex lg:flex-row flex-col justify-between gap-10 items-start relative z-10 p-4">
+        {/* Two-column grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-[72px] items-start">
 
-          {/* LEFT COLUMN: Contact Info */}
-          <div className="lg:w-1/2">
-            <span className="text-accentColor font-bold tracking-widest uppercase text-paragraphSizeMobile block">
-              The Epoxy Revenue Engine
-            </span>
-            <h2 className="leading-tight mt-2 mb-6 text-headingMobile md:text-headingSizeTablet font-extrabold">
-              Fill Your Calendar with <span className="text-accentColor">Qualified Leads.</span>
-            </h2>
+          {/* Left: Contact Info */}
+          <div>
+            <div className="text-[12px] font-bold tracking-[0.08em] uppercase text-white/35 mb-5 font-brand">
+              Reach Us Directly
+            </div>
 
-            <div className="space-y-8">
-              {/* Phone Icon & Info */}
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-mainColor rounded-lg text-accentColor border border-accentColor/20">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg">Call Us Directly</h4>
-                  <p className="">(689) 500-2300</p>
-                </div>
+            <div className="flex items-center gap-3.5 mb-4.5 font-brand">
+              <div className="w-10 h-10 bg-gold/12 rounded-lg flex items-center justify-center text-gold text-[17px] flex-shrink-0">
+                ✆
               </div>
-
-              {/* Email Icon & Info */}
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-mainColor rounded-lg text-accentColor border border-accentColor/20">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className=" font-bold text-lg">Email Us</h4>
-                  <p className="">tony@epoxymetrics.com</p>
-                </div>
+              <div>
+                <small className="block text-[11px] font-semibold tracking-[0.08em] uppercase text-white/30 mb-0.5">
+                  Phone
+                </small>
+                <span className="text-[15px] text-white font-medium">(689) 500-2300</span>
               </div>
+            </div>
 
-              {/* MapPin Icon & Info */}
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-mainColor rounded-lg text-accentColor border border-accentColor/20">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg">Who We Serve</h4>
-                  <p className="">Epoxy & Concrete Coating Pros across the USA.</p>
-                </div>
+            <div className="flex items-center gap-3.5 mb-4.5 font-brand">
+              <div className="w-10 h-10 bg-gold/12 rounded-lg flex items-center justify-center text-gold text-[17px] flex-shrink-0">
+                ✉
               </div>
+              <div>
+                <small className="block text-[11px] font-semibold tracking-[0.08em] uppercase text-white/30 mb-0.5">
+                  Email
+                </small>
+                <span className="text-[15px] text-white font-medium">tony@epoxymetrics.com</span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3.5 mb-4.5 font-brand">
+              <div className="w-10 h-10 bg-gold/12 rounded-lg flex items-center justify-center text-gold text-[17px] flex-shrink-0">
+                ●
+              </div>
+              <div>
+                <small className="block text-[11px] font-semibold tracking-[0.08em] uppercase text-white/30 mb-0.5">
+                  Service Area
+                </small>
+                <span className="text-[15px] text-white font-medium">
+                  Epoxy &amp; Concrete Coating Pros — Nationwide USA
+                </span>
+              </div>
+            </div>
+
+            <div className="mt-9 pt-7 border-t border-gold/15 text-[13px] text-white/32 leading-[1.7] font-brand">
+              We work exclusively with epoxy and concrete coating contractors.
+              Every campaign, workflow, and piece of copy is built for your
+              market.
             </div>
           </div>
 
+          {/* Right: Lead Form */}
           <LeadForm />
 
         </div>
       </div>
-    </Section>
+    </section>
   );
 }
