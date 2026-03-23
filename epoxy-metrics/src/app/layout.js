@@ -1,30 +1,39 @@
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { GoogleTagManager } from '@next/third-parties/google';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
+});
 
-// --- UPDATED METADATA ---
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-display",
+});
+
 export const metadata = {
-  title: "Epoxy Metrics | High-Converting Websites for Flooring Pros",
-  description: "We build custom, high-speed landing pages specifically for epoxy contractors. Stop losing leads to bad design.",
-
-  // Social Media Previews (OpenGraph)
+  title: "Epoxy Metrics | Speed to Lead — AI Appointment Setter for Epoxy Pros",
+  description:
+    "An AI-powered Voice Agent that answers every call, qualifies every lead, and books appointments on your calendar 24/7 — built exclusively for epoxy flooring contractors.",
   openGraph: {
-    title: "Epoxy Metrics | Web Design for Epoxy Pros",
-    description: "Your work is premium. Your website should be too. Get a custom site built for conversion.",
-    url: 'https://epoxymetrics.com',
-    siteName: 'Epoxy Metrics',
-    locale: 'en_US',
-    type: 'website',
+    title: "Epoxy Metrics | AI Appointment Setter for Epoxy Pros",
+    description:
+      "Stop losing $3K–$10K jobs to missed calls. Get an AI Voice Agent that answers 24/7, qualifies leads, and books appointments automatically.",
+    url: "https://epoxymetrics.com",
+    siteName: "Epoxy Metrics",
+    locale: "en_US",
+    type: "website",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
-      <body className={`${inter.className} overflow-x-hidden`}>
+      <body className="overflow-x-hidden">
         {children}
       </body>
     </html>

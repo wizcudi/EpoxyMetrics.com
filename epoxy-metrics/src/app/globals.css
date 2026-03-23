@@ -1,51 +1,75 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Legacy Brand Colors (kept for thank-you page compatibility) */
-  --color-mainColor: #F5F5F5;
-  --color-accentColor: #B87333;
-  --color-accentColorHover: #D18B4A;
-  --color-darkColor: #1B3022;
+  /* Dark Theme */
+  --color-bg: #0B0E11;
+  --color-bgCard: #12161C;
+  --color-bgCardHover: #181D25;
+  --color-surface: #1A1F28;
+  --color-border: #252B36;
+  --color-borderLight: #2E3545;
 
-  /* New Navy/Gold Palette */
-  --color-navy: #0B1F3A;
-  --color-navyMid: #122844;
-  --color-navyLight: #1E3A5F;
-  --color-gold: #C9A84C;
-  --color-goldLight: #E2C97E;
-  --color-goldPale: #F5EDD2;
-  --color-offWhite: #F8F6F0;
-  --color-textMuted: #6B7B8D;
+  /* Text */
+  --color-textBase: #E8EAF0;
+  --color-textMuted: #8B92A0;
+  --color-textDim: #5A6272;
 
-  /* Brand Typography */
-  --font-brand: Arial, Helvetica, sans-serif;
-  --font-serif: Georgia, 'Times New Roman', serif;
+  /* Accent (Amber) */
+  --color-accent: #F59E0B;
+  --color-accentLight: #FCD34D;
 
-  --text-defaultSize: 20px;
+  /* Status */
+  --color-green: #34D399;
+  --color-red: #F87171;
 
-  --text-headingSizeLandscape: 60px;
-  --text-subheadingSizeLandscape: 50px;
+  /* Legacy (thank-you page) */
+  --color-navy: #0B0E11;
+  --color-gold: #F59E0B;
+  --color-goldLight: #FCD34D;
+  --color-offWhite: #E8EAF0;
+  --color-accentColor: #F59E0B;
+  --color-darkColor: #0B0E11;
+  --color-mainColor: #E8EAF0;
 
-  --text-headingSizeTablet: 50px;
-  --text-subheadingSizeTablet: 45px;
+  /* Typography */
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-brand: 'Inter', system-ui, sans-serif;
 
-  --text-headingMobile: 40px;
-  --text-subheadingSizeMobile: 35px;
-
-  --text-paragraphSizeTablet: 20px;
-  --text-paragraphSizeMobile: 17px;
+  --radius: 12px;
+  --radius-sm: 8px;
 }
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-  /* Using the variable defined in @theme */
-  font-family: var(--font-brand);
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-textBase);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-/* Checkmark Animation */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Pulse dot animation for hero badge */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Checkmark Animation (thank-you page) */
 .animate-draw {
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
@@ -54,7 +78,5 @@ body {
 }
 
 @keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
+  to { stroke-dashoffset: 0; }
 }

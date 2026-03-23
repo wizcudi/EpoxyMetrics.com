@@ -1,215 +1,91 @@
-"use client";
-
-import { useState } from "react";
-
 export default function Solution() {
-  const [showAllLeft, setShowAllLeft] = useState(false);
-  const [showAllRight, setShowAllRight] = useState(false);
-
-  const leftFeatures = [
+  const features = [
     {
-      icon: "○",
-      title: "Lead Generation Automation",
-      desc: "Workflows that generate hundreds of fresh, targeted leads pulling from your ideal customer profile in your local market.",
+      num: "01",
+      title: "Custom AI Voice Agent — Trained for Epoxy",
+      desc: "Your own AI phone agent that answers every inbound call and contacts every online lead in under 10 seconds. It knows your services, service area, and sounds like a real team member.",
+      tag: "Core System",
     },
     {
-      icon: "◇",
-      title: "Cold Email Campaigns",
-      desc: "Personalized, automated email sequences that warm up new leads and convert them into booked appointments.",
+      num: "02",
+      title: "Smart Lead Qualification Engine",
+      desc: "Every caller gets pre-qualified on project type, square footage, timeline, and budget. You only talk to people who are ready to buy.",
+      tag: "Saves Hours Weekly",
     },
     {
-      icon: "△",
-      title: "Qualifying & Booking",
-      desc: "We pre-qualify every lead before they hit your calendar, no more tire-kickers eating your time.",
+      num: "03",
+      title: "Real-Time Appointment Booking",
+      desc: "Qualified leads get booked directly onto your calendar during the call. They call, they qualify, they're booked. No back-and-forth.",
+      tag: "Instant Bookings",
     },
     {
-      icon: "■",
-      title: "The Nurture Sequence",
-      desc: "A 7-day automated follow-up for leads who didn't book on the first touch, SMS, email, and social.",
-    },
-  ];
-
-  const rightFeatures = [
-    {
-      icon: "■",
-      title: "Creative Asset Production",
-      desc: "Raw photos and videos turned into high-performance ad creatives with captions, overlays, and proven visual hooks.",
+      num: "04",
+      title: '"No Lead Left Behind" 7-Day Follow-Up',
+      desc: "For callers who don't book on the first attempt, an automated SMS and email sequence follows up for 7 days straight, driving them back to your calendar.",
+      tag: "Automated Recovery",
     },
     {
-      icon: "○",
-      title: "Proven Copywriting",
-      desc: "Hook, retain, reward ad copy written specifically for the local epoxy market, tested across real campaigns.",
+      num: "05",
+      title: "Call Intelligence Dashboard",
+      desc: "See every call, every qualification outcome, every booking, and which marketing source drove it — all in one place. Know your numbers.",
+      tag: "Full Visibility",
     },
     {
-      icon: "△",
-      title: "Technical Tracking",
-      desc: "Meta Pixel & Conversions API installed to track exactly which ads are making money.",
-    },
-    {
-      icon: "◇",
-      title: "A/B Testing",
-      desc: "Constantly testing images and copy to find what converts best in your local market.",
+      num: "06",
+      title: "Human Failover + Full Call Recordings",
+      desc: "If the AI encounters something outside its scope, it seamlessly transfers to a real person. Every call is recorded for complete peace of mind.",
+      tag: "Safety Net",
     },
   ];
-
-  const visibleLeft = showAllLeft ? leftFeatures : leftFeatures.slice(0, 3);
-  const visibleRight = showAllRight ? rightFeatures : rightFeatures.slice(0, 3);
 
   return (
-    <section id="offer" className="bg-offWhite px-[5%] py-16 md:py-[90px]">
-      <div className="max-w-[1200px] mx-auto">
+    <section id="solution" className="py-[100px] relative bg-[#0B0E11]">
+      {/* Ambient glow */}
+      <div
+        className="absolute top-1/2 -left-[300px] w-[600px] h-[600px] rounded-full pointer-events-none opacity-15"
+        style={{ background: "radial-gradient(circle, rgba(245,158,11,0.25) 0%, transparent 70%)" }}
+      />
+
+      <div className="max-w-[1140px] mx-auto px-6">
 
         {/* Header */}
-        <div className="flex items-center gap-2.5 text-[11px] font-bold tracking-[0.14em] uppercase text-gold mb-3.5 font-brand">
-          <span className="w-5 h-0.5 bg-gold flex-shrink-0" />
-          The Solution
-        </div>
-        <h2 className="font-serif font-bold text-navy leading-[1.15] mb-3.5 text-[clamp(28px,3vw,42px)]">
-          The Epoxy Revenue Engine
-        </h2>
-        <p className="text-[16px] text-textMuted max-w-[540px] leading-[1.75] font-brand mb-12">
-          A done-for-you growth system. We handle everything from traffic to
-          booked appointments, so you can focus on what you do best.
-        </p>
-
-        {/* Two-column grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
-
-          {/* Left: Feature Blocks */}
-          <div className="flex flex-col gap-9">
-
-            {/* Appointment Setting Block */}
-            <div>
-              <div className="text-[11px] font-bold tracking-[0.1em] uppercase text-gold mb-2.5 font-brand">
-                Appointment Setting Accelerator
-              </div>
-              <h3 className="font-serif font-bold text-navy text-[22px] leading-[1.25] mb-4">
-                Fill Your Calendar With Qualified Bookings
-              </h3>
-              <div className="flex flex-col">
-                {visibleLeft.map((feat, i) => (
-                  <div
-                    key={i}
-                    className={`flex gap-3 py-4 ${i < visibleLeft.length - 1 ? "border-b border-black/7" : ""} font-brand`}
-                  >
-                    <div className="w-[34px] h-[34px] bg-gold/10 rounded-md flex items-center justify-center text-gold text-[15px] flex-shrink-0 mt-0.5">
-                      {feat.icon}
-                    </div>
-                    <div>
-                      <strong className="block text-[14px] font-semibold text-navy mb-0.5">
-                        {feat.title}
-                      </strong>
-                      <p className="text-[13px] text-textMuted leading-[1.65]">
-                        {feat.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {leftFeatures.length > 3 && (
-                <button
-                  onClick={() => setShowAllLeft(!showAllLeft)}
-                  className="mt-3 text-gold font-bold text-[13px] hover:underline font-brand"
-                >
-                  {showAllLeft ? "View Less" : `View More (${leftFeatures.length - 3})`}
-                </button>
-              )}
-            </div>
-
-            {/* Marketing Block */}
-            <div>
-              <div className="text-[11px] font-bold tracking-[0.1em] uppercase text-gold mb-2.5 font-brand">
-                30-Day Marketing Transformation
-              </div>
-              <h3 className="font-serif font-bold text-navy text-[22px] leading-[1.25] mb-4">
-                Traffic, Ads, and Automation — Done For You
-              </h3>
-              <div className="flex flex-col">
-                {visibleRight.map((feat, i) => (
-                  <div
-                    key={i}
-                    className={`flex gap-3 py-4 ${i < visibleRight.length - 1 ? "border-b border-black/7" : ""} font-brand`}
-                  >
-                    <div className="w-[34px] h-[34px] bg-gold/10 rounded-md flex items-center justify-center text-gold text-[15px] flex-shrink-0 mt-0.5">
-                      {feat.icon}
-                    </div>
-                    <div>
-                      <strong className="block text-[14px] font-semibold text-navy mb-0.5">
-                        {feat.title}
-                      </strong>
-                      <p className="text-[13px] text-textMuted leading-[1.65]">
-                        {feat.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {rightFeatures.length > 3 && (
-                <button
-                  onClick={() => setShowAllRight(!showAllRight)}
-                  className="mt-3 text-gold font-bold text-[13px] hover:underline font-brand"
-                >
-                  {showAllRight ? "View Less" : `View More (${rightFeatures.length - 3})`}
-                </button>
-              )}
-            </div>
-
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 text-[0.75rem] font-semibold text-[#F59E0B] uppercase tracking-[0.1em] mb-4">
+            <span className="w-5 h-px bg-[#F59E0B]" />
+            The Solution
           </div>
-
-          {/* Right: Pricing Card */}
-          <div>
-            <div className="bg-navy rounded-xl px-8 py-9 relative overflow-hidden">
-              {/* Gold top bar */}
-              <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-gold to-goldLight" />
-
-              <div className="text-[11px] font-bold tracking-[0.1em] uppercase text-gold mb-2 font-brand">
-                Investment
-              </div>
-              <div className="font-serif font-bold text-white leading-none mb-1 text-[50px]">
-                <sup className="text-gold text-[22px] align-top mt-2.5 inline-block">$</sup>500
-              </div>
-              <p className="text-[13px] text-white/40 mb-6 font-brand">
-                Refundable deposit · Then 10% commission only
-              </p>
-
-              <hr className="border-none border-t border-gold/20 my-5" />
-
-              {[
-                "Full lead generation system set up for you",
-                "Ad creative production and copywriting",
-                "Cold email campaigns to fresh leads",
-                "Automated follow-up workflows",
-                "Qualifying and calendar booking",
-                "Ongoing optimization and management",
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-2.5 mb-3 text-[14px] text-white/75 font-brand">
-                  <div className="w-[18px] h-[18px] rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 text-gold text-[10px] font-bold mt-0.5">
-                    ✓
-                  </div>
-                  {item}
-                </div>
-              ))}
-
-              <div className="bg-gold/10 border border-gold/30 rounded-md p-3.5 mt-5 font-brand">
-                <strong className="block text-[11px] font-bold tracking-[0.08em] uppercase text-gold mb-1">
-                  100% Risk-Free Guarantee
-                </strong>
-                <p className="text-[13px] text-goldLight leading-[1.6]">
-                  If we don&apos;t land you a confirmed, booked sale within 30 days,
-                  your full $500 deposit is refunded. No questions asked.
-                </p>
-              </div>
-
-              <a
-                href="#contact"
-                className="block text-center bg-gold text-navy text-[14px] font-bold py-3.5 rounded mt-5 hover:bg-goldLight transition-colors font-brand"
-              >
-                Start Your Engine →
-              </a>
-            </div>
-          </div>
-
+          <h2 className="font-display text-[clamp(2rem,3.5vw,2.8rem)] leading-[1.15] font-normal tracking-[-0.02em] text-[#E8EAF0] mb-4">
+            Speed to Lead <em className="italic text-[#F59E0B]">Epoxy Appointment Setter</em>
+          </h2>
+          <p className="text-[1.05rem] text-[#8B92A0] leading-[1.7] max-w-[600px] mx-auto">
+            A done-for-you AI Voice Agent system that handles your phone so you can stay on the job site and close more jobs than ever.
+          </p>
         </div>
+
+        {/* Promise Block */}
+        <div className="bg-[linear-gradient(135deg,rgba(245,158,11,0.12),rgba(245,158,11,0.04))] border border-[rgba(245,158,11,0.2)] rounded-[12px] px-12 py-10 mb-14 text-center">
+          <p className="font-display text-[1.35rem] italic leading-[1.6] text-[#E8EAF0] max-w-[800px] mx-auto">
+            &ldquo;I will install an AI-powered Voice Agent that answers every call, qualifies every lead, and books appointments on your calendar 24/7 — so you can stay on the job site and still close more jobs than you ever did chained to your phone.&rdquo;
+          </p>
+        </div>
+
+        {/* Feature Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {features.map((f) => (
+            <div
+              key={f.num}
+              className="bg-[#12161C] border border-[#252B36] rounded-[12px] px-7 py-8 hover:border-[#2E3545] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)] transition-all"
+            >
+              <div className="font-display text-[2.5rem] text-[#F59E0B] opacity-30 leading-none mb-4">{f.num}</div>
+              <h3 className="text-[1.05rem] font-bold text-[#E8EAF0] leading-[1.35] mb-2.5">{f.title}</h3>
+              <p className="text-[0.88rem] text-[#8B92A0] leading-[1.65]">{f.desc}</p>
+              <span className="inline-block mt-4 text-[0.72rem] font-semibold uppercase tracking-[0.06em] text-[#34D399] bg-[rgba(52,211,153,0.12)] px-[10px] py-1 rounded-full">
+                {f.tag}
+              </span>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

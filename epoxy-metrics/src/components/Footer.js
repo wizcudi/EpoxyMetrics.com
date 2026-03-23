@@ -2,11 +2,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#060E1A] px-[5%] py-7 flex items-center justify-between flex-wrap gap-3.5 border-t border-gold/12 font-brand">
-      <div className="text-[16px] font-bold text-white/35 font-serif">
-        Epoxy<span className="text-gold">Metrics</span>
-      </div>
-      <p className="text-[12px] text-white/22">
+    <footer className="py-10 border-t border-[#252B36] text-center bg-[#0B0E11]">
+      <p className="text-[0.8rem] text-[#5A6272]">
         &copy; {currentYear} Epoxy Metrics. All rights reserved.
       </p>
     </footer>

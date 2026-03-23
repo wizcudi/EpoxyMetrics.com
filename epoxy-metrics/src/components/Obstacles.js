@@ -1,86 +1,74 @@
 export default function Obstacles() {
-  const painPoints = [
+  const problems = [
     {
       num: "01",
-      title: "Your pipeline dries up between jobs",
-      desc: "Word of mouth got you started, but it's not consistent enough to grow. You finish one job and scramble to find the next.",
+      title: "You miss calls all day because you're on the job site",
+      desc: "You physically cannot answer the phone while pouring epoxy or grinding concrete. Every unanswered ring is revenue walking away.",
+      tag: "↓ $3K–$10K lost per missed call",
     },
     {
       num: "02",
-      title: "You're wasting time on tire-kickers",
-      desc: "You're quoting homeowners who price-shop three contractors and ghost you. Chasing bad leads is costing you hours you can't get back.",
+      title: "By the time you call back, the lead already hired someone else",
+      desc: "Speed to lead is everything in home services. A 30-minute delay can kill a deal. Homeowners call 2–3 contractors — the first to answer wins.",
     },
     {
       num: "03",
-      title: "Digital marketing feels like a black hole",
-      desc: "You've tried boosting posts or running ads. Results were underwhelming and you had no idea what went wrong.",
+      title: "After-hours and weekend calls just go to voicemail",
+      desc: "Homeowners search and call in evenings and weekends — exactly when you're off the clock. Voicemail is where leads go to die.",
     },
     {
       num: "04",
-      title: "You can't get a real ROI from paid ads",
-      desc: "Every ad dollar feels like a gamble. No system, no tracking, no repeatable results, just hope and a shrinking budget.",
+      title: "You waste time on tire-kickers who aren't serious",
+      desc: "You spend 20 minutes on the phone only to find out the caller has a 50 sq ft closet and a $200 budget.",
     },
     {
       num: "05",
-      title: "Follow-up falls through the cracks",
-      desc: "A lead comes in, life gets busy, and a week later you realize you never followed up. That job went to a competitor who did.",
+      title: "Leads slip through the cracks with no follow-up system",
+      desc: "No CRM, no system. Leads are scribbled on paper or lost in a text thread. No follow-up means no second chance.",
     },
     {
       num: "06",
-      title: "You're too busy doing floors to grow",
-      desc: "You're great at the work but marketing and follow-up require a completely different skill set and hours you don't have.",
+      title: "You can't afford to hire a receptionist",
+      desc: "A full-time hire is $35K–$50K/year plus management overhead, benefits, and the headache of turnover. It's just not realistic.",
     },
   ];
 
   return (
-    <section id="pain" className="bg-navy px-[5%] py-16 md:py-[90px]">
-      <div className="max-w-[1200px] mx-auto">
+    <section id="problem" className="py-[100px] bg-[#0B0E11]">
+      <div className="max-w-[1140px] mx-auto px-6">
 
         {/* Header */}
-        <div className="flex items-center gap-2.5 text-[11px] font-bold tracking-[0.14em] uppercase text-gold mb-3.5 font-brand">
-          <span className="w-5 h-0.5 bg-gold flex-shrink-0" />
-          Sound Familiar?
+        <div className="inline-flex items-center gap-2 text-[0.75rem] font-semibold text-[#F59E0B] uppercase tracking-[0.1em] mb-4">
+          <span className="w-5 h-px bg-[#F59E0B]" />
+          The Problem
         </div>
-        <h2 className="font-serif font-bold text-white leading-[1.15] mb-3.5 text-[clamp(28px,3vw,42px)]">
-          Every Epoxy Contractor<br />Hits These Walls
+        <h2 className="font-display text-[clamp(2rem,3.5vw,2.8rem)] leading-[1.15] font-normal tracking-[-0.02em] text-[#E8EAF0] mb-4">
+          Every Missed Call Is a Job<br />Walking to Your <em className="italic text-[#F59E0B]">Competitor</em>
         </h2>
-        <p className="text-[16px] text-white/50 max-w-[540px] leading-[1.75] font-brand mb-12">
-          If any of these keep you up at night, you&apos;re not alone and
-          you&apos;re exactly who the Epoxy Revenue Engine was built for.
+        <p className="text-[1.05rem] text-[#8B92A0] leading-[1.7] max-w-[600px] mb-14">
+          You&apos;re on the job site. The phone rings. You can&apos;t answer. By the time you call back — they&apos;ve already hired someone else.
         </p>
 
-        {/* Pain Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4.5">
-          {painPoints.map((point) => (
+        {/* Problem Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {problems.map((p) => (
             <div
-              key={point.num}
-              className="border border-gold/15 rounded-[10px] px-6 py-6.5 hover:border-gold/50 hover:bg-gold/4 transition-all font-brand"
+              key={p.num}
+              className="bg-[#12161C] border border-[#252B36] rounded-[12px] p-7 relative overflow-hidden group hover:border-[#2E3545] transition-all"
             >
-              <div className="text-[38px] font-bold text-gold/15 leading-none mb-2.5 font-serif">
-                {point.num}
-              </div>
-              <h3 className="text-[16px] font-semibold text-white leading-[1.35] mb-2">
-                {point.title}
-              </h3>
-              <p className="text-[13px] text-white/42 leading-[1.7]">
-                {point.desc}
-              </p>
+              {/* Red top line on hover */}
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#F87171] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+              <div className="font-display text-[1.4rem] text-[#5A6272] mb-3">{p.num}</div>
+              <h3 className="text-[1rem] font-semibold text-[#E8EAF0] leading-[1.4] mb-2">{p.title}</h3>
+              <p className="text-[0.88rem] text-[#8B92A0] leading-[1.6]">{p.desc}</p>
+              {p.tag && (
+                <span className="inline-flex items-center gap-1 mt-3 text-[0.78rem] font-semibold text-[#F87171] bg-[rgba(248,113,113,0.10)] px-[10px] py-1 rounded-full">
+                  {p.tag}
+                </span>
+              )}
             </div>
           ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="mt-12 pt-7 border-t border-gold/20 flex items-center justify-between flex-wrap gap-5">
-          <p className="text-[22px] font-bold text-white max-w-[520px] font-serif">
-            We built one system to{" "}
-            <span className="text-gold">solve all of this.</span>
-          </p>
-          <a
-            href="#offer"
-            className="bg-gold text-navy text-[14px] font-bold px-7 py-3.5 rounded hover:bg-goldLight transition-colors font-brand"
-          >
-            See the Solution →
-          </a>
         </div>
 
       </div>
